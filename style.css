@@ -1,0 +1,388 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.heading {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.heading h3 {
+  font-size: 70px;
+  text-decoration: none;
+  background: linear-gradient(180deg, rgb(87, 87, 87) 5%, white 95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* FREQUENTLY USED  */
+.mobile {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  padding-bottom: 70px;
+  margin: 0;
+  background: linear-gradient(270deg, rgb(1, 0, 54) 5%, rgb(0, 0, 0) 95%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mobile .text {
+  width: 80%;
+  height: auto;
+  margin: auto 10%;
+}
+.mobile .text h3 {
+  font-size: 25px;
+  text-decoration: none;
+  background: linear-gradient(180deg, rgb(87, 87, 87) 5%, white 95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 600px) {
+  .mobile {
+    display: flex; /* Show the div on screens smaller than 600px */
+  }
+
+  .portfolio-body {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .mobile {
+    display: none; /* Show the div on screens smaller than 600px */
+  }
+
+  .portfolio-body {
+    display: block;
+  }
+}
+
+/* RESPONSIVE */
+.portfolio-body {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  padding-bottom: 70px;
+  margin: 0;
+  background: linear-gradient(270deg, rgb(1, 0, 54) 5%, rgb(0, 0, 0) 95%);
+  /* background: rgb(0, 27, 6); */
+}
+.portfolio-body .homepage {
+  width: 90%;
+  height: 100vh;
+  margin: 0px 5%;
+}
+.portfolio-body .homepage .navbar-main {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  border: 1px 0 0 0 white;
+}
+
+.portfolio-body .homepage .navbar-main .links {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 30%;
+}
+.portfolio-body .homepage .navbar-main .links a {
+  font-family: emoji;
+  font-size: 22px;
+  text-decoration: none;
+  background: linear-gradient(180deg, rgb(87, 87, 87) 5%, white 95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.portfolio-body .homepage .homepage-content {
+  width: 100%;
+  height: calc(100vh - 70px);
+  display: flex;
+  gap: 20px;
+}
+.portfolio-body .homepage .homepage-content .home-text {
+  width: calc(100% - 10px);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.portfolio-body .homepage .homepage-content .home-text .child-home h3 {
+  font-family: sans-serif;
+  font-size: 120px;
+  text-decoration: none;
+  background: linear-gradient(180deg, rgb(0, 36, 136) 15%, rgb(0, 38, 255) 85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.portfolio-body .homepage .homepage-content .home-text .child-home p {
+  font-family: emoji;
+  font-size: 28px;
+  text-decoration: none;
+  background: linear-gradient(180deg, rgb(87, 87, 87) 5%, white 95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 12px;
+}
+
+.portfolio-body .homepage .homepage-content .home-text .child-home a button {
+  font-family: emoji;
+  font-size: 27px;
+  text-decoration: none;
+  background: linear-gradient(180deg, rgb(2, 0, 136) 15%, rgb(0, 26, 255) 85%);
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 19px 28px;
+  margin-top: 70px;
+  transition: 0.8s;
+  color: white;
+}
+.portfolio-body .homepage .homepage-content .home-text a button:hover {
+  background: rgb(0, 4, 255);
+}
+.portfolio-body .homepage .homepage-content .home-media {
+  width: calc(100% - 10px);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.portfolio-body .homepage .homepage-content .home-media video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  /* box-shadow: 10px 10px 10px 10px white; */
+  border: 2px solid white;
+}
+
+/* ABOUUT */
+
+.about {
+  width: calc(90%- 20px);
+  height: auto;
+  margin: 0px 5%;
+  padding: 20px;
+}
+.description-border {
+  width: 100%;
+  height: auto;
+  border: 2px solid white;
+  border-radius: 30px;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  animation: blurappear;
+  animation-timeline: view();
+}
+
+.desc {
+  width: 90%;
+  height: auto;
+  margin: 40px 5%;
+}
+.desc p {
+  font-family: emoji;
+  font-size: 28px;
+  text-decoration: none;
+  color: rgb(226, 226, 226);
+  /* background: linear-gradient(180deg, rgb(87, 87, 87) 5%, white 95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  margin-top: 12px;
+}
+
+/* ANIMATING */
+@keyframes blurappear {
+  from {
+    opacity: 10%;
+    /* filter: blur(25px); */
+  }
+  to {
+    opacity: 100%;
+    /* filter: blur(0px); */
+  }
+}
+
+.education {
+  width: 90%;
+  height: 100%;
+  margin: 70px 5%;
+}
+.edu-container {
+  width: 100%;
+  height: auto;
+  border: 2px solid white;
+  padding: 20px;
+  border-radius: 30px;
+  margin: 50px auto;
+  animation: blurappear;
+  animation-timeline: view();
+}
+.edu-box {
+  width: 100%;
+  height: auto;
+  margin: 30px auto;
+}
+
+.edu-box .degree {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.edu-box .cgpa {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.edu-box .institution {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.edu-box .degree h3 {
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  background: linear-gradient(180deg, rgb(87, 87, 87) 5%, white 95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.edu-box .cgpa h2 {
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  background: linear-gradient(180deg, rgb(87, 87, 87) 5%, white 95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.edu-box .institution h1 {
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  background: linear-gradient(180deg, rgb(87, 87, 87) 5%, white 95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Services  */
+.services {
+  width: 90%;
+  height: auto;
+  margin: 100px 5%;
+}
+
+.service-container {
+  width: 90%;
+  height: auto;
+  padding: 5% 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+.service-box {
+  width: 300px;
+  height: auto;
+  padding: 15px;
+  border: 2px solid white;
+  border-radius: 30px;
+  display: grid;
+  text-align: center;
+  animation: blurappear;
+  animation-timeline: view();
+}
+.service-box h1 {
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  background: linear-gradient(180deg, rgb(87, 87, 87) 5%, white 95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 20px;
+}
+.service-box p {
+  font-family: emoji;
+  font-size: 20px;
+  text-decoration: none;
+  color: rgb(196, 196, 196);
+  /* background: linear-gradient(180deg, rgb(87, 87, 87) 5%, white 95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  margin-top: 12px;
+  margin-bottom: 15px;
+}
+.service-box .logo {
+  width: auto;
+  height: auto;
+}
+.service-box .logo img {
+  width: 200px;
+  height: auto;
+}
+
+/* PROJECTS */
+
+.projects {
+  width: 90%;
+  height: auto;
+  margin: 70px 5%;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding-top: 20px;
+}
+.projects-container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  gap: 70px 50px;
+  margin-top: 70px;
+}
+.project-div {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding: 30px 0px;
+  margin: 30px auto;
+}
+
+.ps1 {
+  justify-content: left;
+}
+.ps2 {
+  justify-content: right;
+}
+.ps3 {
+  justify-content: center;
+}
+.shorts {
+  width: 100px;
+}
+.projects-container .video {
+  width: 1000px;
+  height: auto;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+.shorts {
+  width: 500px;
+}
+
+.VL {
+  margin-left: 50px;
+}
+
+.VR {
+  margin-right: 50px;
+}
